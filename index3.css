@@ -1,0 +1,44 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 70vh;
+}
+img {
+  height: 250px;
+  width: 250px;
+}
+p {
+  font-size: 1.2rem;
+  margin-bottom: 50px
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.btn a {
+  margin-top: 28px;
+  margin-right: 10px;
+  padding: 14px 40px;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #000000;
+  background: transparent;
+  border: 2px solid rgba(102, 100, 100, 0.7);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn a:active {
+  transform: scale(0.96);
+  background: #000000;
+  color: #fffdfd;
+}
+
+.btn a:hover {
+  background: #000000;
+  color: #fffdfd;
+}

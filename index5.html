@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index5.css">
+  <title>For You</title>
+</head>
+<body>
+<section class="gift-select">
+
+  <h1>Open one by one 💝</h1>
+  <p class="hint">Tap a sticker to open your surprise</p>
+
+  <div class="stickers">
+    <a href="para.html" class="sticker">
+      <!-- <img src="download.png" alt="Gift 3"> -->
+       <img src="cat1.jpg" alt="">
+      
+    </a>
+
+    <a href="timeline.html" class="sticker">
+      <img src="CACU048.webp" alt="Gift 2">
+    </a>
+
+    <a href="video.html" class="sticker">
+      <img src="CACU046.webp" alt="Gift 3">
+    </a>
+    <a href="gift4.html" class="sticker">
+      <img src="cat2.jpg" alt="Gift 1">
+    </a>
+  </div>
+
+</section>
+
+
+
+
+<script>
+  const stickers = document.querySelectorAll(".sticker");
+
+  stickers.forEach(sticker => {
+    sticker.addEventListener("click", (e) => {
+      e.preventDefault(); // ⛔ stop instant open
+
+      const link = sticker.getAttribute("href");
+
+      // 💖 Heart burst
+      for (let i = 0; i < 7; i++) {
+        const heart = document.createElement("span");
+        heart.className = "heart";
+        heart.innerText = "❤️";
+
+        const x = e.clientX + (Math.random() * 40 - 20);
+        const y = e.clientY + (Math.random() * 40 - 20);
+
+        heart.style.left = x + "px";
+        heart.style.top = y + "px";
+
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 800);
+      }
+
+      // ⏳ Delay → then open gift
+      setTimeout(() => {
+        window.location.href = link;
+      }, 800); // same duration as animation
+    });
+  });
+</script>
+
+
+
+</body>
+</html>

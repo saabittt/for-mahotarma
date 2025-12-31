@@ -1,0 +1,172 @@
+/* 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.ny-countdown {
+  min-height: 100vh;
+  background-color: black;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+}
+
+.ny-countdown h1 {
+  margin-bottom: 30px;
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+
+.timer {
+  display: flex;
+  gap: 5px;
+}
+
+.timer div {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 10px;
+  min-width: 100px;
+}
+
+.timer span {
+  font-size: 2rem;
+  font-weight: bold;
+  display: block;
+}
+
+.timer p {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+.btn button {
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+.btn button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+} */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+img {
+  height: 150px;
+  width: 150px;
+}
+h1 {
+    
+  margin-top: 20px;
+  font-size: 1.6rem;
+}
+.ny {
+  min-height: 100vh;
+  background: linear-gradient(160deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  font-family: system-ui, sans-serif;
+}
+
+/* Heading */
+.ny p {
+  font-size: clamp(1.6rem, 6vw, 2.5rem);
+  margin-bottom: 25px;
+  line-height: 1.3;
+  margin-top: 10px;
+}
+
+/* Countdown layout */
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  width: 100%;
+  max-width: 320px;
+}
+
+/* Time boxes */
+.box {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  padding: 18px 10px;
+  backdrop-filter: blur(6px);
+}
+
+.box span {
+  font-size: clamp(2rem, 9vw, 3rem);
+  font-weight: 700;
+  display: block;
+}
+
+.box small {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+/* Desktop enhancement */
+@media (min-width: 768px) {
+  .countdown {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 600px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;;
+}
+.open-btn {
+  margin-top: 28px;
+  padding: 14px 40px;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.open-btn:active {
+  transform: scale(0.96);
+}
+
+.open-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* Better tap area on small phones */
+@media (max-width: 400px) {
+  .open-btn {
+    width: 100%;
+    max-width: 260px;
+  }
+}
+

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
+  <title>For Mahotarma</title>
+</head>
+<body>
+<div class="ny">
+  <img src="il_570xN.5450098992_l0a4.avif" alt="">
+  <h1>There is something special for you😙</h1>
+  <p>Wait for the countdown to end Please...</p>
+  <div class="countdown">
+    <div class="box">
+      <span id="days">00</span>
+      <small>Days</small>
+    </div>
+    <div class="box">
+      <span id="hours">00</span>
+      <small>Hours</small>
+    </div>
+    <div class="box">
+      <span id="minutes">00</span>
+      <small>Minutes</small>
+    </div>
+    <div class="box">
+      <span id="seconds">00</span>
+      <small>Seconds</small>
+    </div>
+  </div>
+
+  <!-- OPEN Button -->
+  <a class="open-btn" href="index2.html">OPEN</a>
+</div>
+
+<script>
+  function nextNewYear() {
+    const now = new Date();
+    return new Date(now.getFullYear() + 1, 0, 1);
+  }
+
+  const target = nextNewYear().getTime();
+
+  setInterval(() => {
+    const now = new Date().getTime();
+    const diff = target - now;
+
+    if (diff <= 0) {
+      document.querySelector(".ny").innerHTML =
+        "<h1>🎆 Happy New Year 🎆</h1>";
+      return;
+    }
+
+    document.getElementById("days").innerText =
+      Math.floor(diff / (1000 * 60 * 60 * 24));
+    document.getElementById("hours").innerText =
+      Math.floor((diff / (1000 * 60 * 60)) % 24);
+    document.getElementById("minutes").innerText =
+      Math.floor((diff / (1000 * 60)) % 60);
+    document.getElementById("seconds").innerText =
+      Math.floor((diff / 1000) % 60);
+  }, 1000);
+</script>
+
+    <!-- <script src="index.js"></script> -->
+</body>
+</html>

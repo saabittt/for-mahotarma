@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="index4.css"> -->
+  <title>For You</title>
+</head>
+<body>
+  <section class="welcome">
+  <img src="WhatsApp Image 2025-12-29 at 00.57.48_c6efe626.jpg" alt="Cute cat" class="hero-img">
+
+ <h1 class="newyear-title">
+  <span class="top">Happy New Year</span>
+  <span class="name">Mahotarma!!</span>
+</h1>
+
+
+
+  <a href="index5.html"><button class="open-btn">OPEN GIFTS</button></a>
+</section>
+
+
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.welcome {
+  min-height: 100vh;
+   background: linear-gradient(180deg, #fff, #ffeef3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px 20px;
+  font-family: system-ui, sans-serif;
+}
+
+/* Image */
+.hero-img {
+  width: 140px;
+  margin-bottom: 10px;
+
+}
+
+/* Text */
+
+.newyear-title {
+  text-align: center;
+  margin-bottom: 28px;
+  line-height: 1.2;
+}
+
+/* Happy New Year */
+.newyear-title .top {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+/* Name */
+.newyear-title .name {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  /* color: #222; */
+  color: #000000;
+  position: relative;
+}
+
+/* small decorative line */
+.newyear-title .name::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #f2a7c6;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+
+/* Button */
+.open-btn {
+  padding: 14px 38px;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  background: transparent;
+  border: 1.8px solid #222;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.open-btn:hover {
+  background: #222;
+  color: #fff;
+}
+
+.open-btn:active {
+  transform: scale(0.95);
+}
+.hero-img {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+.open-btn:active {
+  box-shadow: 0 0 0 6px rgba(0,0,0,0.08);
+}
+
+</style>
+</body>
+</html>
