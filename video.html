@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For You</title>
+</head>
+<body>
+  <section class="video-page">
+
+  <h1>
+  Here is Some videos I made 
+  <span>Just for you 🤍</span>
+  <span>Scroll to end</span>
+</h1>
+
+
+  <div class="video-list">
+    <div class="video-card">
+      <video src="video3.mp4" poster="t1.jpg" controls></video>
+    </div>
+       <div class="video-card">
+      <video src="video2.mp4" poster="t2.jpg" controls></video>
+    </div>
+  </div>
+
+</section>
+
+
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.video-page h1 {
+  text-align: center;
+font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.35;
+  margin-bottom: 15px;
+  color: #cc5353;
+}
+
+.video-page h1 span {
+  display: block;
+  font-size: 1.1rem;
+  color: #777;
+  margin-top: 6px;
+}
+
+
+
+
+.video-page::after {
+  content: "— End —";
+  display: block;
+  text-align: center;
+  margin-top: 40px;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.video-page {
+  min-height: 100vh;
+ background: linear-gradient(180deg, #fff, #ffeef3);
+  padding: 28px 18px 40px;
+  font-family: system-ui, sans-serif;
+}
+
+/* Video list */
+.video-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Video card */
+.video-card {
+  background: #fff;
+  padding: 12px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* Video */
+.video-card video {
+  width: 100%;
+  border-radius: 12px;
+  background: #000;
+  aspect-ratio: 9 / 16; /* perfect for phone videos */
+}
+
+</style>
+<script>
+  const thumbs = document.querySelectorAll(".thumb");
+  const modal = document.getElementById("videoModal");
+  const mainVideo = document.getElementById("mainVideo");
+  const closeBtn = document.querySelector(".close");
+
+  thumbs.forEach(video => {
+    video.addEventListener("click", () => {
+      mainVideo.src = video.src;
+      modal.style.display = "flex";
+      mainVideo.play();
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    mainVideo.pause();
+    mainVideo.src = "";
+    modal.style.display = "none";
+  });
+</script>
+
+</body>
+</html>
